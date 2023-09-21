@@ -22,7 +22,6 @@ export default function Life({ value, resetOptions, item, setItem }) {
     if (defense) setItem({ ...rest, optionLifeDefense: value });
 
     setSelectValue(value);
-    console.log(selectValue);
   };
 
   const handleLifeOption = (e) => {

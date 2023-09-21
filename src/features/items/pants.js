@@ -7,6 +7,7 @@ const initialState = [
     class: ["Dark Wizard"],
     defense: 17,
     defenseDefault: 17,
+    defenseAncient: 22,
     update: 0,
     type: "Pants",
     typeLife: "typeDefense",

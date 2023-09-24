@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
-export default function Life({ value, resetOptions, item, setItem }) {
+export default function Life({ item, setItem }) {
+  const life = useSelector((state) => state.options.life);
+  const lifeActive = life.type.includes(item?.type);
+
   const [selectValue, setSelectValue] = useState("");
   const [lifeOption, setLifeOption] = useState({
     hp: false,
@@ -50,94 +54,53 @@ export default function Life({ value, resetOptions, item, setItem }) {
       hp: false,
       defense: false,
     });
-  }, [resetOptions]);
+  }, [item?.name]);
 
   return (
     <>
-      {value && (
-        <div>
-          <label htmlFor="life">Add Life: </label>
-          <select name="life" value={selectValue} onChange={(e) => addLifeOption(e)} className="text-black w-20">
-            <option>Select</option>
-            <option value={lifeOption.hp ? "1" : "4"}>{lifeOption.hp ? "+1%" : "+4"}</option>
-            <option value={lifeOption.hp ? "2" : "8"}>{lifeOption.hp ? "+2%" : "+8"}</option>
-            <option value={lifeOption.hp ? "3" : "12"}>{lifeOption.hp ? "+3%" : "+12"}</option>
-            <option value={lifeOption.hp ? "4" : "16"}>{lifeOption.hp ? "+4%" : "+16"}</option>
-          </select>
-          <div className="flex flex-col mt-2">
-            {value.typeOne && (
-              <div>
-                <label htmlFor="hp" className="mr-2">
-                  {value.typeOne}
-                </label>
-                <input
-                  type="checkbox"
-                  checked={lifeOption.hp}
-                  onChange={(e) => handleLifeOption(e)}
-                  name="hp"
-                  value="hp"
-                />
-              </div>
-            )}
-            {value.typeTwo && (
-              <div>
-                <label htmlFor="wiz" className="mr-2">
-                  {value.typeTwo}
-                </label>
-                <input
-                  type="checkbox"
-                  checked={lifeOption.wiz}
-                  value="wiz"
-                  onChange={(e) => handleLifeOption(e)}
-                  name="wiz"
-                />
-              </div>
-            )}
-            {value.typeThree && (
-              <div>
-                <label htmlFor="dmg" className="mr-2">
-                  {value.typeThree}
-                </label>
-                <input
-                  type="checkbox"
-                  checked={lifeOption.dmg}
-                  value="dmg"
-                  onChange={(e) => handleLifeOption(e)}
-                  name="dmg"
-                />
-              </div>
-            )}
-            {value.typeFour && (
-              <div>
-                <label htmlFor="curse" className="mr-2">
-                  {value.typeFour}
-                </label>
-                <input
-                  type="checkbox"
-                  checked={lifeOption.curse}
-                  value="curse"
-                  onChange={(e) => handleLifeOption(e)}
-                  name="curse"
-                />
-              </div>
-            )}
-            {value.typeFive && (
-              <div>
-                <label htmlFor="defense" className="mr-2">
-                  {value.typeFive}
-                </label>
-                <input
-                  type="checkbox"
-                  checked={lifeOption.defense}
-                  value="defense"
-                  onChange={(e) => handleLifeOption(e)}
-                  name="defense"
-                />
-              </div>
-            )}
+      {lifeActive ? (
+        <>
+          <div>
+            <label htmlFor="life">Add Life: </label>
+            <select name="life" value={selectValue} onChange={(e) => addLifeOption(e)} className="text-black w-20">
+              <option>Select</option>
+              {Object.entries(lifeOption).map(([key, value]) => {
+                if (value) {
+                  return (
+                    <>
+                      <option value={lifeOption.hp ? "1" : "4"}>{lifeOption.hp ? "+1%" : "+4"}</option>
+                      <option value={lifeOption.hp ? "2" : "8"}>{lifeOption.hp ? "+2%" : "+8"}</option>
+                      <option value={lifeOption.hp ? "3" : "12"}>{lifeOption.hp ? "+3%" : "+12"}</option>
+                      <option value={lifeOption.hp ? "4" : "16"}>{lifeOption.hp ? "+4%" : "+16"}</option>
+                    </>
+                  );
+                }
+              })}
+            </select>
+            <div className="flex flex-col mt-2">
+              {Object.entries(life.typeOptions).map(([key, value], index) => {
+                const option = item.typeLife.includes(key);
+                if (option) {
+                  return (
+                    <div>
+                      <label htmlFor={value} className="mr-2">
+                        {life.optionsInDOM[index]}
+                      </label>
+                      <input
+                        type="checkbox"
+                        checked={lifeOption[value]}
+                        onChange={(e) => handleLifeOption(e)}
+                        name={value}
+                        value={value}
+                      />
+                    </div>
+                  );
+                }
+              })}
+            </div>
           </div>
-        </div>
-      )}
+        </>
+      ) : null}
     </>
   );
 }

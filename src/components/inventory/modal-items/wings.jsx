@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Ancients from "../../options/ancients";
 import Ancient from "./ancient";
 export default function Wings({ item, setItem, resetOptions, optionsWings, modalActive }) {
-  const test = useSelector((state) => state.setAncient);
+  const luck = useSelector((state) => state.options.luck);
   const [checkboxOptions, setCheckboxOptions] = useState({
     hpMax: false,
     manaMax: false,
@@ -108,12 +108,13 @@ export default function Wings({ item, setItem, resetOptions, optionsWings, modal
               <br />
               {item.criticalDamageRate && (
                 <>
-                  <li>
-                    <span className="text-blue-300">Luck(success rate Jewel of Soul +25%)</span>
-                  </li>
-                  <li>
-                    <span className="text-blue-300">Luck(critical damage rate +5%)</span>
-                  </li>
+                  {luck.optionsInDOM.map((opt, index) => {
+                    return (
+                      <li key={index}>
+                        <span className="text-blue-300">{opt}</span>
+                      </li>
+                    );
+                  })}
                 </>
               )}
               <>

@@ -1,4 +1,7 @@
+import { useSelector } from "react-redux";
+
 export default function Ancient({ item, optionsWings }) {
+  const optionsInDOM = useSelector((state) => state.options.ancientOption[0]);
   return (
     <div className="grid grid-cols-5">
       <div className="col-span-3">
@@ -23,6 +26,7 @@ export default function Ancient({ item, optionsWings }) {
           <span className="text-amber-400">Set Item option info</span>
         </li>
         {optionsWings?.optionsAdvanced?.map((opt, index) => {
+          const option = optionsInDOM[optionsWings.optionsInDOM[index]];
           const { name } = opt;
           if (optionsWings?.effectAncient) {
             return (
@@ -36,7 +40,7 @@ export default function Ancient({ item, optionsWings }) {
                 ) : null}
                 <li key={index}>
                   <span className="text-gray-600">
-                    {optionsWings.optionsInDOM[0][index]} {optionsWings.optionsAdvanced[index][name]}
+                    {option} {optionsWings.optionsAdvanced[index][name]}
                     {opt.rate}
                   </span>
                 </li>

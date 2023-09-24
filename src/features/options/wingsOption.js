@@ -44,7 +44,6 @@ const initialState = [
     tier: 3,
     optionsBasic: [
       { update: true, defense: 4, damageAbsorb: 2, DamageIncreaseRate: [2], level: 0 },
-      { Luck: true },
       {
         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
         typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },

@@ -1,19 +1,61 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
+  [
+    "Increase Strength ",
+    "Increase Agility ",
+    "Increase Stamina ",
+    "Increase Energy ",
+    "Increase Command ",
+    "Increase All Stats ",
+    "Increase Max. Life ",
+    "Increase Max. Mana ",
+    "Increase Maximum AG ",
+    "Increase AG Value ",
+    "Increase Defense ",
+    "Increases Base Defense ",
+    "Increase defense when using shield weapons ",
+    "Increase Damage ",
+    "Increase Wizardry Damage ",
+    "Increase Magical Damage ",
+    "Increases Wizardry/Curse Damage ",
+    "Increase Attack ",
+    "Increase Min. Damage ",
+    "Increase Max. Damage ",
+    "Increase damage when using two handed weapons ",
+    "Increase Attack Rate ",
+    "Increase Skill Damage ",
+    "Increase Critical Damage Chance ",
+    "Increase Excellent Damage Chance ",
+    "Increase Critical Damage ",
+    "Increase Excellent Damage ",
+    "Double damage Chance ",
+    "Increase Triple damage Chance ",
+    "Ignore Enemy's Defense ",
+    "DEF Increase Reinforcement ",
+    "DMG Increase Reinforcement ",
+    "Bless Reinforcement ",
+    "Strong Blessing - Increases Party Member's ATK/Wizardry ",
+    "Strong Blessing - Increases HP COnversion Rate ",
+    "Strong Blessing - Increases Shield DEF ",
+    "Increase Mastery DMG ",
+    "Increase Mastery Wizardry ",
+    "Increase Mastery Wizardry/Curse ",
+    "Increase Mastery Critical DMG ",
+    "Increase Mastery Excellent DMG ",
+    "Increase Mastery Skill DMG ",
+    "Increase Mastery Basic DEF ",
+    "Increase Mastery Strength ",
+    "Increase Mastery Energy ",
+    "Increase Mastery All Stats ",
+    "Increase Mastery Max HP ",
+    "Increase Mastery Damage Reduction ",
+    "Increase Mastery Strengthening Skill DMG ",
+  ],
   {
     name: "Barnake",
     Barnake: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { wizDmgRate: 10, name: "wizDmgRate", rate: "%", multiplier: 0 },
         { statsEnergy: 20, name: "statsEnergy", multiplier: 0 },
@@ -24,24 +66,13 @@ const initialState = [
       partsEffect: [2, 3],
       optionsActivated: [0, 1, 4],
       partsAncient: ["Helm", "Pants", "Boots"],
-      optionsInDOM: [
-        ["Increase Wizardry Damage ", "Increase Energy ", "Increase Skill Damage ", "Increase Max. Mana "],
-      ],
+      optionsInDOM: [14, 3, 22, 7],
     },
   },
   {
     name: "Apollo",
     Apollo: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { statsEnergy: 10, name: "statsEnergy", multiplier: 0 },
         { wizDmgRate: 5, name: "wizDmgRate", rate: "%", multiplier: 0 },
@@ -56,35 +87,14 @@ const initialState = [
       effectAncient: [0, 1, 2, 3, 4, 5],
       partsEffect: [2, 3, 4, 5, 6, 7],
       optionsActivated: [0, 1, 2, 3, 4, 5, 6],
-      partsAncient: ["Helm", "Armor", "Gloves", "Pants", "Weapon 1", "Pendant", "Ring"],
-      optionsInDOM: [
-        [
-          "Increase Energy ",
-          "Increase Wizardry Damage ",
-          "Increase Skill Damage ",
-          "Increase Max. Mana ",
-          "Increase Max. Life ",
-          "Increase Maximum AG ",
-          "Increase Critical Damage Chance ",
-          "Increase Excellent Damage Chance ",
-          "Increase Energy ",
-        ],
-      ],
+      partsAncient: ["Skull Staff", "Helm", "Armor", "Pants", "Gloves", "Ring", "Pendant"],
+      optionsInDOM: [3, 14, 22, 7, 6, 8, 25, 24, 22, 26],
     },
   },
   {
     name: "Sylion",
     Sylion: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
         { criticalDamageRate: 5, multiplier: 0, name: "criticalDamageRate", rate: "%" },
@@ -98,32 +108,13 @@ const initialState = [
       partsEffect: [2, 3, 4],
       optionsActivated: [0, 1, 2, 7],
       partsAncient: ["Helm", "Armor", "Gloves", "Boots"],
-      optionsInDOM: [
-        [
-          "Double damage Chance ",
-          "Increase Critical Damage Chance ",
-          "Increase Defense ",
-          "Increase Strength ",
-          "Increase Agility ",
-          "Increase Stamina ",
-          "Increase Energy ",
-        ],
-      ],
+      optionsInDOM: [27, 23, 10, 0, 1, 2, 3],
     },
   },
   {
     name: "Evis",
     Evis: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { skillDamage: 15, name: "skillDamage", multiplier: 0 },
         { statsStamina: 20, name: "statsStamina", multiplier: 0 },
@@ -136,31 +127,13 @@ const initialState = [
       partsEffect: [2, 3, 4],
       optionsActivated: [0, 1, 2, 6],
       partsAncient: ["Armor", "Pants", "Boots", "Pendant"],
-      optionsInDOM: [
-        [
-          "Increase Skill Damage ",
-          "Increase Stamina ",
-          "Increase Wizardry Damage ",
-          "Double damage Chance ",
-          "Increase Attack Rate ",
-          "Increase AG Value ",
-        ],
-      ],
+      optionsInDOM: [22, 2, 14, 27, 21, 14],
     },
   },
   {
     name: "Heras",
     Heras: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { statsStrength: 15, name: "statsStrength", multiplier: 0 },
         { wizDmgRate: 10, name: "wizDmgRate", rate: "%", multiplier: 0 },
@@ -169,41 +142,20 @@ const initialState = [
         { atackRate: 50, name: "atackRate", multiplier: 0 },
         { criticalDamageRate: 10, multiplier: 0, name: "criticalDamageRate", rate: "%" },
         { excellentDamageRate: 10, multiplier: 0, name: "excellentDamageRate", rate: "%" },
-        { hp: true, hpMax: 50, multiplier: 0, name: "hpMax" },
+        { hp: true, hpMax: 50, name: "hpMax", multiplier: 0 },
         { mana: true, manaMax: 50, name: "manaMax", multiplier: 0 },
       ],
       effectAncient: [0, 1, 2, 3, 4],
       partsEffect: [2, 3, 4, 5, 6],
       optionsActivated: [0, 1, 2, 3, 4, 9],
-      partsAncient: ["Helm", "Armor", "Gloves", "Pants", "Boots", "Shield"],
-      optionsInDOM: [
-        [
-          "Increase Strength ",
-          "Increase Wizardry Damage ",
-          "Increase defense when using shield weapons ",
-          "Increase Energy ",
-          "Increase Attack Rate ",
-          "Increase Critical Damage Chance ",
-          "Increase Excellent Damage Chance ",
-          "Increase Max. Life ",
-          "Increase Max. Mana ",
-        ],
-      ],
+      partsAncient: ["Shield", "Helm", "Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [0, 14, 12, 3, 21, 23, 24, 6, 7],
     },
   },
   {
     name: "Minet",
     Minet: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { statsEnergy: 30, name: "statsEnergy", multiplier: 0 },
         { defense: 30, name: "defense", multiplier: 0 },
@@ -214,22 +166,13 @@ const initialState = [
       partsEffect: [2, 3],
       optionsActivated: [0, 1, 4],
       partsAncient: ["Armor", "Pants", "Boots"],
-      optionsInDOM: [["Increase Energy ", "Increase Defense ", "Increase Max. Mana ", "Increase Skill Damage "]],
+      optionsInDOM: [3, 10, 7, 22],
     },
   },
   {
     name: "Anubis",
     Anubis: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
         { mana: true, manaMax: 50, name: "manaMax", multiplier: 0 },
@@ -243,32 +186,13 @@ const initialState = [
       partsEffect: [2, 3, 4],
       optionsActivated: [0, 1, 2, 7],
       partsAncient: ["Helm", "Armor", "Gloves", "Ring"],
-      optionsInDOM: [
-        [
-          "Double damage Chance ",
-          "Increase Max. Mana ",
-          "Increase Wizardry Damage ",
-          "Increase Critical Damage Chance ",
-          "Increase Excellent Damage Chance ",
-          "Increase Critical Damage ",
-          "Increase Excellent Damage ",
-        ],
-      ],
+      optionsInDOM: [27, 7, 14, 23, 24, 25, 26],
     },
   },
   {
     name: "Enis",
     Enis: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { skillDamage: 10, name: "skillDamage", multiplier: 0 },
         { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
@@ -279,31 +203,14 @@ const initialState = [
       effectAncient: [0, 1, 2],
       partsEffect: [2, 3, 4],
       optionsActivated: [0, 1, 2, 5],
-      partsAncient: ["Helm", "Armor", "Gloves", "Boots"],
-      optionsInDOM: [
-        [
-          "Increase Skill Damage ",
-          "Double damage Chance ",
-          "Increase Energy ",
-          "Increase Wizardry Damage ",
-          "Ignore Enemy's Defense ",
-        ],
-      ],
+      partsAncient: ["Helm", "Armor", "Pants", "Boots"],
+      optionsInDOM: [22, 27, 3, 14, 29],
     },
   },
   {
     name: "Warrior",
     Warrior: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { statsStrength: 10, name: "statsStrength", multiplier: 0 },
         { skillDamage: 10, name: "skillDamage", multiplier: 0 },
@@ -318,35 +225,14 @@ const initialState = [
       effectAncient: [0, 1, 2, 3, 4, 5],
       partsEffect: [2, 3, 4, 5, 6, 7],
       optionsActivated: [0, 1, 2, 3, 4, 5, 9],
-      partsAncient: ["Helm", "Armor", "Gloves", "Pants", "Boots", "Weapon 1", "Ring"],
-      optionsInDOM: [
-        [
-          "Increase Strength ",
-          "Increase Skill Damage ",
-          "Increase Maximum AG ",
-          "Increase AG Value ",
-          "Increase Defense ",
-          "Increase Agility ",
-          "Increase Critical Damage Chance ",
-          "Increase Excellent Damage Chance ",
-          "Increase Strength ",
-        ],
-      ],
+      partsAncient: ["Morining Star", "Helm", "Armor", "Pants", "Gloves", "Boots", "Ring"],
+      optionsInDOM: [0, 22, 8, 9, 10, 1, 23, 24, 0],
     },
   },
   {
     name: "Anonymous",
     Anonymous: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { hp: true, hpMax: 50, multiplier: 0, name: "hpMax" },
         { statsAgility: 50, name: "statsAgility", multiplier: 0 },
@@ -356,25 +242,14 @@ const initialState = [
       effectAncient: [0, 1, 2],
       partsEffect: [2, 3, 4],
       optionsActivated: [0, 1, 4],
-      partsAncient: ["Helm", "Pants", "Boots", "Shield"],
-      optionsInDOM: [
-        ["Increase Max. Life ", "Increase Agility ", "Increase defense when using shield weapons ", "Increase Damage "],
-      ],
+      partsAncient: ["Shield", "Helm", "Pants", "Boots"],
+      optionsInDOM: [6, 1, 12, 13],
     },
   },
   {
     name: "Hyperion",
     Hyperion: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { statsEnergy: 15, name: "statsEnergy", multiplier: 0 },
         { statsAgility: 15, name: "statsAgility", multiplier: 0 },
@@ -385,22 +260,30 @@ const initialState = [
       partsEffect: [2, 3],
       optionsActivated: [0, 1, 4],
       partsAncient: ["Armor", "Pants", "Boots"],
-      optionsInDOM: [["Increase Energy ", "Increase Agility ", "Increase Skill Damage ", "Increase Max. Mana "]],
+      optionsInDOM: [3, 1, 22, 7],
+    },
+  },
+  {
+    name: "Mists",
+    Mists: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { statsStamina: 20, name: "statsStamina", multiplier: 0 },
+        { skillDamage: 30, name: "skillDamage", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { statsAgility: 20, name: "statsAgility", multiplier: 0 },
+      ],
+      effectAncient: [0, 1],
+      partsEffect: [2, 3],
+      optionsActivated: [0, 1, 4],
+      partsAncient: ["Helm", "Pants", "Gloves"],
+      optionsInDOM: [2, 22, 27, 1],
     },
   },
   {
     name: "Eplete",
     Eplete: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { skillDamage: 15, name: "skillDamage", multiplier: 0 },
         { atackRate: 50, name: "atackRate", multiplier: 0 },
@@ -413,33 +296,14 @@ const initialState = [
       effectAncient: [0, 1, 2, 3],
       partsEffect: [2, 3, 4, 5],
       optionsActivated: [0, 1, 2, 3, 7],
-      partsAncient: ["Helm", "Armor", "Pants", "Shield", "Pendant"],
-      optionsInDOM: [
-        [
-          "Increase Skill Damage ",
-          "Increase Attack Rate ",
-          "Increase Wizardry Damage ",
-          "Increase Max. Life ",
-          "Increase Maximum AG ",
-          "Increase Critical Damage Chance ",
-          "Increase Excellent Damage Chance ",
-        ],
-      ],
+      partsAncient: ["Shield", "Helm", "Armor", "Pants", "Pendant"],
+      optionsInDOM: [22, 21, 14, 6, 8, 23, 24],
     },
   },
   {
     name: "Berserker",
     Berserker: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { maxDmg: 10, name: "maxDmg", multiplier: 0 },
         { maxDmg: 20, name: "maxDmg", multiplier: 0 },
@@ -451,32 +315,14 @@ const initialState = [
       effectAncient: [0, 1, 2, 3],
       partsEffect: [2, 3, 4, 5],
       optionsActivated: [0, 1, 2, 3, 6],
-      partsAncient: ["Helm", "Armor", "Gloves", "Pants", "Boots"],
-      optionsInDOM: [
-        [
-          "Increase Max. Damage ",
-          "Increase Max. Damage ",
-          "Increase Max. Damage ",
-          "Increase Max. Damage ",
-          "Increase Skill Damage ",
-          "Increase Strength ",
-        ],
-      ],
+      partsAncient: ["Helm", "Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [19, 19, 19, 19, 22, 0],
     },
   },
   {
     name: "Garuda",
     Garuda: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { ag: true, agMax: 30, multiplier: 0, name: "agMax" },
         { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
@@ -488,32 +334,14 @@ const initialState = [
       effectAncient: [0, 1, 2, 3],
       partsEffect: [2, 3, 4, 5],
       optionsActivated: [0, 1, 2, 3, 6],
-      partsAncient: ["Armor", "Gloves", "Pants", "Boots", "Pendant"],
-      optionsInDOM: [
-        [
-          "Increase Maximum AG ",
-          "Double damage Chance ",
-          "Increase Energy ",
-          "Increase Max. Life ",
-          "Increase Skill Damage ",
-          "Increase Wizardry Damage ",
-        ],
-      ],
+      partsAncient: ["Armor", "Pants", "Gloves", "Boots", "Pendant"],
+      optionsInDOM: [8, 27, 3, 6, 22, 14],
     },
   },
   {
     name: "Cloud",
     Cloud: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { criticalDamageRate: 20, multiplier: 0, name: "criticalDamageRate", rate: "%" },
         { criticalDamage: 50, multiplier: 0, name: "criticalDamage" },
@@ -522,22 +350,13 @@ const initialState = [
       partsEffect: [2],
       optionsActivated: [0, 2],
       partsAncient: ["Helm", "Pants"],
-      optionsInDOM: [["Increase Critical Damage Chance ", "Increase Critical Damage "]],
+      optionsInDOM: [23, 25],
     },
   },
   {
     name: "Kantata",
     Kantata: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { statsEnergy: 15, name: "statsEnergy", multiplier: 0 },
         { statsStamina: 30, name: "statsStamina", multiplier: 0 },
@@ -551,32 +370,13 @@ const initialState = [
       partsEffect: [2, 3, 4, 5],
       optionsActivated: [0, 1, 2, 3, 7],
       partsAncient: ["Armor", "Gloves", "Boots", "Ring", "Ring"],
-      optionsInDOM: [
-        [
-          "Increase Energy ",
-          "Increase Stamina ",
-          "Increase Wizardry Damage ",
-          "Increase Strength ",
-          "Increase Skill Damage ",
-          "Increase Excellent Damage Chance ",
-          "Increase Excellent Damage ",
-        ],
-      ],
+      optionsInDOM: [3, 2, 14, 0, 22, 24, 26],
     },
   },
   {
     name: "Rave",
     Rave: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { skillDamage: 20, name: "skillDamage", multiplier: 0 },
         { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
@@ -587,29 +387,13 @@ const initialState = [
       partsEffect: [2, 3],
       optionsActivated: [0, 1, 4],
       partsAncient: ["Helm", "Armor", "Pants"],
-      optionsInDOM: [
-        [
-          "Increase Skill Damage ",
-          "Double damage Chance ",
-          "Increase damage when using two handed weapons ",
-          "Ignore Enemy's Defense ",
-        ],
-      ],
+      optionsInDOM: [22, 27, 20, 29],
     },
   },
   {
     name: "Hyon",
     Hyon: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { defense: 25, name: "defense", multiplier: 0 },
         { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
@@ -622,33 +406,14 @@ const initialState = [
       effectAncient: [0, 1, 2],
       partsEffect: [2, 3, 4],
       optionsActivated: [0, 1, 2, 7],
-      partsAncient: ["Helm", "Gloves", "Boots", "Weapon 1"],
-      optionsInDOM: [
-        [
-          "Increase Defense ",
-          "Double damage Chance ",
-          "Increase Skill Damage ",
-          "Increase Critical Damage Chance ",
-          "Increase Excellent Damage Chance ",
-          "Increase Critical Damage ",
-          "Increase Excellent Damage ",
-        ],
-      ],
+      partsAncient: ["Lightning Sword", "Helm", "Gloves", "Boots"],
+      optionsInDOM: [10, 27, 22, 23, 24, 25, 26],
     },
   },
   {
     name: "Vicious",
     Vicious: {
-      optionsBasic: [
-        { update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 },
-        { Luck: true },
-        {
-          typeDefense: { typeFive: "Additional Defense" },
-          /*         typeMagic: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg" },
-        typeCurse: { typeOne: "HP recovery", typeTwo: "Additional Wizardry Dmg", typeFour: "Additional Curse Spell" },
-        typePhysical: { typeOne: "HP recovery", typeThree: "Additional Dmg" }, */
-        },
-      ],
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
       optionsAdvanced: [
         { skillDamage: 15, name: "skillDamage", multiplier: 0 },
         { damage: 15, name: "damage", multiplier: 0 },
@@ -661,16 +426,683 @@ const initialState = [
       partsEffect: [2, 3, 4],
       optionsActivated: [0, 1, 2, 6],
       partsAncient: ["Helm", "Armor", "Pants", "Ring"],
-      optionsInDOM: [
-        [
-          "Increase Skill Damage ",
-          "Increase Damage ",
-          "Double damage Chance ",
-          "Increase Min. Damage ",
-          "Increase Max. Damage ",
-          "Ignore Enemy's Defense ",
-        ],
+      optionsInDOM: [22, 13, 27, 18, 19, 29],
+    },
+  },
+  {
+    name: "Ceto",
+    Ceto: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { statsAgility: 10, name: "statsAgility", multiplier: 0 },
+        { hp: true, hpMax: 50, multiplier: 0, name: "hpMax" },
+        { defense: 20, name: "defense", multiplier: 0 },
+        { defenseShield: 5, name: "defenseShield", multiplier: 0 },
+        { statsEnergy: 10, name: "statsEnergy", multiplier: 0 },
+        { hp: true, hpMax: 50, multiplier: 0, name: "hpMax" },
+        { statsStrength: 20, name: "statsStrength", multiplier: 0 },
       ],
+      effectAncient: [0, 1, 2, 3, 4],
+      partsEffect: [2, 3, 4, 5, 6],
+      optionsActivated: [0, 1, 2, 3, 4, 7],
+      partsAncient: ["Rapier", "Helm", "Pants", "Gloves", "Boots", "Ring"],
+      optionsInDOM: [1, 6, 10, 12, 3, 6, 0],
+    },
+  },
+  {
+    name: "Drake",
+    Drake: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { statsAgility: 20, name: "statsAgility", multiplier: 0 },
+        { damage: 25, name: "damage", multiplier: 0 },
+        { doubleDamageRate: 20, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defense: 40, name: "defense", multiplier: 0 },
+        { criticalDamageRate: 10, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 5],
+      partsAncient: ["Helm", "Armor", "Pants", "Boots"],
+      optionsInDOM: [1, 13, 27, 10, 23],
+    },
+  },
+  {
+    name: "Gaia",
+    Gaia: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { skillDamage: 10, name: "skillDamage", multiplier: 0 },
+        { mana: true, manaMax: 25, name: "manaMax", multiplier: 0 },
+        { statsStrength: 10, name: "statsStrength", multiplier: 0 },
+        { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { statsAgility: 30, name: "statsAgility", multiplier: 0 },
+        { excellentDamageRate: 10, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { excellentDamage: 10, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2, 3],
+      partsEffect: [2, 3, 4, 5],
+      optionsActivated: [0, 1, 2, 3, 7],
+      partsAncient: ["Golden Crossbow", "Helm", "Armor", "Pants", "Gloves"],
+      optionsInDOM: [22, 7, 0, 27, 1, 24, 26],
+    },
+  },
+  {
+    name: "Fase",
+    Fase: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { hp: true, hpMax: 100, multiplier: 0, name: "hpMax" },
+        { mana: true, manaMax: 100, name: "manaMax", multiplier: 0 },
+        { defense: 100, name: "defense", multiplier: 0 },
+      ],
+      effectAncient: [0, 1],
+      partsEffect: [2, 3],
+      optionsActivated: [0, 1, 3],
+      partsAncient: ["Pants", "Gloves", "Boots"],
+      optionsInDOM: [6, 7, 10],
+    },
+  },
+  {
+    name: "Odin",
+    Odin: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { statsEnergy: 15, name: "statsEnergy", multiplier: 0 },
+        { hp: true, hpMax: 50, multiplier: 0, name: "hpMax" },
+        { atackRate: 50, name: "atackRate", multiplier: 0 },
+        { statsAgility: 30, name: "statsAgility", multiplier: 0 },
+        { mana: true, manaMax: 50, name: "manaMax", multiplier: 0 },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+        { ag: true, agMax: 50, multiplier: 0, name: "agMax" },
+      ],
+      effectAncient: [0, 1, 2, 3],
+      partsEffect: [2, 3, 4, 5],
+      optionsActivated: [0, 1, 2, 3, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [3, 6, 21, 1, 7, 29, 8],
+    },
+  },
+  {
+    name: "Elvian",
+    Elvian: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { statsAgility: 30, name: "statsAgility", multiplier: 0 },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0],
+      partsEffect: [2],
+      optionsActivated: [0, 2],
+      partsAncient: ["Pants", "Boots"],
+      optionsInDOM: [1, 29],
+    },
+  },
+  {
+    name: "Argo",
+    Argo: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { maxDmg: 20, name: "maxDmg", multiplier: 0 },
+        { skillDamage: 25, name: "skillDamage", multiplier: 0 },
+        { ag: true, agMax: 50, multiplier: 0, name: "agMax" },
+        { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+      ],
+      effectAncient: [0, 1],
+      partsEffect: [2, 3],
+      optionsActivated: [0, 1, 4],
+      partsAncient: ["Armor", "Pants", "Gloves"],
+      optionsInDOM: [19, 22, 8, 27],
+    },
+  },
+  {
+    name: "Karis",
+    Karis: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { skillDamage: 15, name: "skillDamage", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { criticalDamageRate: 10, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { statsAgility: 40, name: "statsAgility", multiplier: 0 },
+      ],
+      effectAncient: [0, 1],
+      partsEffect: [2, 3],
+      optionsActivated: [0, 1, 4],
+      partsAncient: ["Helm", "Pants", "Boots"],
+      optionsInDOM: [22, 27, 23, 1],
+    },
+  },
+  {
+    name: "Gywen",
+    Gywen: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { statsAgility: 30, name: "statsAgility", multiplier: 0 },
+        { minDmg: 20, name: "minDmg", multiplier: 0 },
+        { defense: 20, name: "defense", multiplier: 0 },
+        { maxDmg: 20, name: "maxDmg", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2, 3],
+      partsEffect: [2, 3, 4, 5],
+      optionsActivated: [0, 1, 2, 3, 8],
+      partsAncient: ["Silver Bow", "Armor", "Gloves", "Boots", "Pendant"],
+      optionsInDOM: [1, 18, 10, 19, 23, 24, 25, 26],
+    },
+  },
+  {
+    name: "Aruan",
+    Aruan: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { damage: 10, name: "damage", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 6],
+      partsAncient: ["Helm", "Armor", "Pants", "Boots"],
+      optionsInDOM: [13, 27, 22, 23, 24, 29],
+    },
+  },
+  {
+    name: "Gaion",
+    Gaion: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+        { doubleDamageRate: 15, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { skillDamage: 15, name: "skillDamage", multiplier: 0 },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { excellentDamage: 30, multiplier: 0, name: "excellentDamage" },
+        { wizDmgRate: 10, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { statsStrength: 30, name: "statsStrength", multiplier: 0 },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Armor", "Pants", "Boots", "Pendant"],
+      optionsInDOM: [29, 27, 22, 24, 26, 14, 0],
+    },
+  },
+  {
+    name: "Muren",
+    Muren: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { skillDamage: 10, name: "skillDamage", multiplier: 0 },
+        { wizDmgRate: 10, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defense: 25, name: "defense", multiplier: 0 },
+        { maxDmgTwohandedWeapon: 20, name: "maxDmgTwohandedWeapon" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Armor", "Pants", "Gloves", "Ring"],
+      optionsInDOM: [22, 14, 27, 23, 24, 10, 20],
+    },
+  },
+  {
+    name: "Agnis",
+    Agnis: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defense: 40, name: "defense", multiplier: 0 },
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Ring"],
+      optionsInDOM: [27, 10, 22, 23, 24, 25, 26],
+    },
+  },
+  {
+    name: "Broy",
+    Broy: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { damage: 20, name: "damage", multiplier: 0 },
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { statsEnergy: 30, name: "statsEnergy", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+        { statsCommand: 30, name: "statsCommand", multiplier: 0 },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Pants", "Gloves", "Boots", "Pendant"],
+      optionsInDOM: [13, 22, 3, 23, 24, 29, 4],
+    },
+  },
+  {
+    name: "Chrono",
+    Chrono: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { doubleDamageRate: 20, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defense: 60, name: "defense", multiplier: 0 },
+        { skillDamage: 30, name: "skillDamage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Helm", "Pants", "Gloves", "Ring"],
+      optionsInDOM: [27, 10, 22, 23, 24, 25, 26],
+    },
+  },
+  {
+    name: "Semeden",
+    Semeden: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { wizDmgRate: 15, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { skillDamage: 25, name: "skillDamage", multiplier: 0 },
+        { statsEnergy: 30, name: "statsEnergy", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 6],
+      partsAncient: ["Helm", "Armor", "Gloves", "Boots"],
+      optionsInDOM: [14, 22, 3, 23, 24, 29],
+    },
+  },
+  {
+    name: "Vega",
+    Vega: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { atackRate: 50, name: "atackRate", multiplier: 0 },
+        { statsStamina: 50, name: "statsStamina", multiplier: 0 },
+        { maxDmg: 30, name: "maxDmg", multiplier: 0 },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 6],
+      partsAncient: ["Sacred Glove", "Helm", "Armor", "Pants"],
+      optionsInDOM: [21, 2, 19, 24, 27, 29],
+    },
+  },
+  {
+    name: "Chamer",
+    Chamer: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { defense: 50, name: "defense", multiplier: 0 },
+        { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { damage: 30, name: "damage", multiplier: 0 },
+        { criticalDamage: 30, multiplier: 0, name: "criticalDamage" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { skillDamage: 30, name: "skillDamage", multiplier: 0 },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Sacred Glove", "Armor", "Pants", "Boots"],
+      optionsInDOM: [10, 27, 13, 25, 24, 29],
+    },
+  },
+  {
+    name: "Dorov",
+    Dorov: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { damage: 20, name: "damage", multiplier: 0 },
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { hp: true, hpMax: 100, multiplier: 0, name: "hpMax" },
+        { mana: true, manaMax: 100, name: "manaMax", multiplier: 0 },
+        { defenseShield: 5, name: "defenseShield", multiplier: 0 },
+        { criticalDamageRate: 10, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 10, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+      ],
+      effectAncient: [0, 2, 4],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 2, 4, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Ring"],
+      optionsInDOM: [13, 22, 6, 7, 12, 23, 24],
+    },
+  },
+  {
+    name: "Anas",
+    Anas: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { defense: 40, name: "defense", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { damage: 20, name: "damage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseShield: 5, name: "defenseShield", multiplier: 0 },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Vis Shield", "Helm", "Armor", "Pants"],
+      optionsInDOM: [22, 10, 27, 13, 23, 24, 12],
+    },
+  },
+  {
+    name: "Akhir",
+    Akhir: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { skillDamage: 30, name: "skillDamage", multiplier: 0 },
+        { statsStrength: 30, name: "statsStrength", multiplier: 0 },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Pants", "Gloves", "Boots", "Ring"],
+      optionsInDOM: [22, 13, 26, 25, 23, 24, 29],
+    },
+  },
+  {
+    name: "Camill",
+    Camill: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { minDmg: 30, name: "minDmg", multiplier: 0 },
+        { maxDmg: 50, name: "maxDmg", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { damage: 20, name: "damage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseShield: 5, name: "defenseShield", multiplier: 0 },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Pluma Shield", "Helm", "Armor", "Pants"],
+      optionsInDOM: [18, 19, 27, 13, 23, 24, 12],
+    },
+  },
+  {
+    name: "Carthy",
+    Carthy: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { skillDamage: 30, name: "skillDamage", multiplier: 0 },
+        { statsAgility: 30, name: "statsAgility", multiplier: 0 },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Pants", "Gloves", "Boots", "Ring"],
+      optionsInDOM: [22, 1, 26, 25, 23, 24, 29],
+    },
+  },
+  {
+    name: "Arcadin",
+    Arcadin: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+        { wizDmgRate: 10, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { statsEnergy: 30, name: "statsEnergy", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [29, 14, 3, 23, 24, 25, 26],
+    },
+  },
+  {
+    name: "Emile",
+    Emile: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { hp: true, hpMax: 300, multiplier: 0, name: "hpMax" },
+        { defense: 45, name: "defense", multiplier: 0 },
+        { skillDamage: 10, name: "skillDamage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { ag: true, agMax: 50, multiplier: 0, name: "agMax" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["El Haz Shield", "Helm", "Armor", "Pants"],
+      optionsInDOM: [27, 6, 10, 22, 23, 24, 8],
+    },
+  },
+  {
+    name: "Molosso",
+    Molosso: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { defense: 50, name: "defense", multiplier: 0 },
+        { minDmg: 20, name: "minDmg", multiplier: 0 },
+        { maxDmg: 30, name: "maxDmg", multiplier: 0 },
+        { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { skillDamage: 15, name: "skillDamage", multiplier: 0 },
+      ],
+      effectAncient: [0, 1, 3],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 3, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Gloves"],
+      optionsInDOM: [10, 18, 19, 27, 29, 24, 22],
+    },
+  },
+  {
+    name: "Vesper",
+    Vesper: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { hp: true, hpMax: 100, multiplier: 0, name: "hpMax" },
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 5],
+      partsAncient: ["Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [6, 22, 23, 24, 27],
+    },
+  },
+  {
+    name: "Falcon",
+    Falcon: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { skillDamage: 15, name: "skillDamage", multiplier: 0 },
+        { wizDmgRate: 15, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { minDmg: 20, name: "minDmg", multiplier: 0 },
+        { maxDmg: 30, name: "maxDmg", multiplier: 0 },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 6],
+      partsAncient: ["Helm", "Armor", "Pants", "Gloves"],
+      optionsInDOM: [22, 14, 27, 18, 19, 29],
+    },
+  },
+  {
+    name: "Burning",
+    Burning: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { defense: 25, name: "defense", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Boots"],
+      optionsInDOM: [10, 27, 22, 23, 24, 25, 26],
+    },
+  },
+  {
+    name: "Magus",
+    Magus: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { doubleDamageRate: 20, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defense: 60, name: "defense", multiplier: 0 },
+        { skillDamage: 30, name: "skillDamage", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [27, 10, 22, 23, 24, 25, 26],
+    },
+  },
+  {
+    name: "Baldur",
+    Baldur: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { wizDmgRate: 15, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { statsEnergy: 30, name: "statsEnergy", multiplier: 0 },
+        { hp: true, hpMax: 50, multiplier: 0, name: "hpMax" },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Gloves"],
+      optionsInDOM: [14, 27, 3, 6, 23, 24, 29],
+    },
+  },
+  {
+    name: "Maat",
+    Maat: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { wizDmgRate: 15, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { skillDamage: 30, name: "skillDamage", multiplier: 0 },
+        { hp: true, hpMax: 50, multiplier: 0, name: "hpMax" },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Gloves"],
+      optionsInDOM: [14, 27, 22, 6, 23, 24, 29],
+    },
+  },
+  {
+    name: "Freya",
+    Freya: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { doubleDamageRate: 20, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defense: 60, name: "defense", multiplier: 0 },
+        { wizDmgRate: 10, name: "wizDmgRate", rate: "%", multiplier: 0 },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamage: 20, multiplier: 0, name: "criticalDamage" },
+        { excellentDamage: 20, multiplier: 0, name: "excellentDamage" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 7],
+      partsAncient: ["Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [27, 10, 14, 23, 24, 25, 26],
+    },
+  },
+  {
+    name: "Destroyer",
+    Destroyer: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { defense: 50, name: "defense", multiplier: 0 },
+        { minDmg: 20, name: "minDmg", multiplier: 0 },
+        { maxDmg: 30, name: "maxDmg", multiplier: 0 },
+        { doubleDamageRate: 5, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+        { defenseIgnoreRate: 5, multiplier: 0, name: "defenseIgnoreRate", rate: "%" },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { skillDamage: 15, name: "skillDamage", multiplier: 0 },
+      ],
+      effectAncient: [0, 1, 3],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 3, 7],
+      partsAncient: ["Helm", "Armor", "Pants", "Gloves"],
+      optionsInDOM: [10, 18, 19, 27, 29, 24, 22],
+    },
+  },
+  {
+    name: "Mortal",
+    Mortal: {
+      optionsBasic: [{ update: true, defense: 3, damageAbsorb: 0, DamageIncreaseRate: [0], level: 0 }],
+      optionsAdvanced: [
+        { hp: true, hpMax: 100, multiplier: 0, name: "hpMax" },
+        { skillDamage: 20, name: "skillDamage", multiplier: 0 },
+        { excellentDamageRate: 15, multiplier: 0, name: "excellentDamageRate", rate: "%" },
+        { criticalDamageRate: 15, multiplier: 0, name: "criticalDamageRate", rate: "%" },
+        { doubleDamageRate: 10, multiplier: 0, name: "doubleDamageRate", rate: "%" },
+      ],
+      effectAncient: [0, 1, 2],
+      partsEffect: [2, 3, 4],
+      optionsActivated: [0, 1, 2, 5],
+      partsAncient: ["Armor", "Pants", "Gloves", "Boots"],
+      optionsInDOM: [6, 22, 24, 23, 27],
     },
   },
 ];
